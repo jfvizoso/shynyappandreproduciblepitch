@@ -1,0 +1,29 @@
+Melbourne Housing Price
+========================================================
+author: Jose Fernandez Vizoso 
+date: 11/Jan/2018
+autosize: true
+
+Introduction
+========================================================
+Melbourne Housing Price Shiny app shows the price of houses related with the distance to the center of Melbourne filtered by the number of desired rooms
+
+Data was obtained from <https://www.kaggle.com/anthonypino/melbourne-housing-market>.
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+Slide With Code
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
