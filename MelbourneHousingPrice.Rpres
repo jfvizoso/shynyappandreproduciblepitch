@@ -10,20 +10,34 @@ Melbourne Housing Price Shiny app shows the price of houses related with the dis
 
 Data was obtained from <https://www.kaggle.com/anthonypino/melbourne-housing-market>.
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+An uncompressed copy is available at <https://raw.githubusercontent.com/jfvizoso/shynyappandreproduciblepitch/master/Melbourne_housing_FULL.csv>.
 
-Slide With Code
+Reading Data
 ========================================================
+The code below can be used to read the data.
+
 
 ```{r}
-summary(cars)
+data <- read.csv("https://raw.githubusercontent.com/jfvizoso/shynyappandreproduciblepitch/master/Melbourne_housing_FULL.csv")
+head(data, 4)
 ```
 
-Slide With Plot
+Plot Example
 ========================================================
+The filtered data will be shown in a chart like the one below:
 
 ```{r, echo=FALSE}
-plot(cars)
+    filteredData <- data[data$Rooms==6 & data$Distance>=0 & data$Distance<=10,]
+
+    plot(filteredData$Price/1000~filteredData$Distance, xlab="Distance from center of Melbourne", ylab="Price in thousands of dollars")    
+    abline(lm(filteredData$Price/1000~filteredData$Distance), col="red")
 ```
+Application
+========================================================
+The application is published in shinyapps.io 
+
+<https://jfvizoso.shinyapps.io/MelbourneHousing/>
+
+
+
+
